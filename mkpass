@@ -1,0 +1,3 @@
+#!/usr/bin/bash
+
+dd bs=4096 count=1 if=/dev/random of=- | sha256sum

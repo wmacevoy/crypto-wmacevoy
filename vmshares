@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ! -d "$HOME/shares" ]
+then
+    mkdir $HOME/shares
+fi
+/usr/bin/vmhgfs-fuse .host:/ "$HOME/shares" -o subtype=vmhgfs-fuse

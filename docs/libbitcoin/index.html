@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>python-bitcoinlib 0.11.1dev documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="#">python-bitcoinlib 0.11.1dev documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">python-bitcoinlib 0.11.1dev documentation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="python-bitcoinlib-documentation">
+<h1>python-bitcoinlib Documentation<a class="headerlink" href="#python-bitcoinlib-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="api-reference">
+<h2>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h2>
+<p>This section contains auto-generated API documentation.</p>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<span id="document-bitcoin"></span><div class="section" id="bitcoin">
+<h3>bitcoin<a class="headerlink" href="#bitcoin" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4><a class="reference internal" href="#module-bitcoin" title="bitcoin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bitcoin</span></code></a><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<span class="target" id="module-bitcoin"></span></div>
+<div class="section" id="module-bitcoin.base58">
+<span id="base58"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">base58</span></code><a class="headerlink" href="#module-bitcoin.base58" title="Permalink to this headline">¶</a></h4>
+<p>Base58 encoding and decoding</p>
+</div>
+<div class="section" id="module-bitcoin.bloom">
+<span id="bloom"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">bloom</span></code><a class="headerlink" href="#module-bitcoin.bloom" title="Permalink to this headline">¶</a></h4>
+<p>Bloom filter support</p>
+</div>
+<div class="section" id="module-bitcoin.messages">
+<span id="messages"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">messages</span></code><a class="headerlink" href="#module-bitcoin.messages" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-bitcoin.net">
+<span id="net"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">net</span></code><a class="headerlink" href="#module-bitcoin.net" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-bitcoin.rpc">
+<span id="rpc"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">rpc</span></code><a class="headerlink" href="#module-bitcoin.rpc" title="Permalink to this headline">¶</a></h4>
+<p>Bitcoin Core RPC support</p>
+<p>By default this uses the standard library <code class="docutils literal notranslate"><span class="pre">json</span></code> module. By monkey patching,
+a different implementation can be used instead, at your own risk:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">simplejson</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">bitcoin.rpc</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">bitcoin</span><span class="o">.</span><span class="n">rpc</span><span class="o">.</span><span class="n">json</span> <span class="o">=</span> <span class="n">simplejson</span>
+</pre></div>
+</div>
+<p>(<code class="docutils literal notranslate"><span class="pre">simplejson</span></code> is the externally maintained version of the same module and
+thus better optimized but perhaps less stable.)</p>
+</div>
+<div class="section" id="module-bitcoin.signature">
+<span id="signature"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">signature</span></code><a class="headerlink" href="#module-bitcoin.signature" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-bitcoin.signmessage">
+<span id="signmessage"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">signmessage</span></code><a class="headerlink" href="#module-bitcoin.signmessage" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-bitcoin.wallet">
+<span id="wallet"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">wallet</span></code><a class="headerlink" href="#module-bitcoin.wallet" title="Permalink to this headline">¶</a></h4>
+<p>Wallet-related functionality</p>
+<p>Includes things like representing addresses and converting them to/from
+scriptPubKeys; currently there is no actual wallet support implemented.</p>
+</div>
+</div>
+<span id="document-bitcoin.core"></span><div class="section" id="bitcoin-core">
+<h3>bitcoin.core<a class="headerlink" href="#bitcoin-core" title="Permalink to this headline">¶</a></h3>
+<p>Everything consensus critical is found in the core subpackage.</p>
+<div class="section" id="module-bitcoin.core">
+<span id="core"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code><a class="headerlink" href="#module-bitcoin.core" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="module-bitcoin.core.key">
+<span id="key"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">key</span></code><a class="headerlink" href="#module-bitcoin.core.key" title="Permalink to this headline">¶</a></h4>
+<p>ECC secp256k1 crypto routines</p>
+<p>WARNING: This module does not mlock() secrets; your private keys may end up on
+disk in swap! Use with caution!</p>
+</div>
+<div class="section" id="module-bitcoin.core.script">
+<span id="script"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">script</span></code><a class="headerlink" href="#module-bitcoin.core.script" title="Permalink to this headline">¶</a></h4>
+<p>Scripts</p>
+<p>Functionality to build scripts, as well as SignatureHash(). Script evaluation
+is in bitcoin.core.scripteval</p>
+</div>
+<div class="section" id="module-bitcoin.core.scripteval">
+<span id="scripteval"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripteval</span></code><a class="headerlink" href="#module-bitcoin.core.scripteval" title="Permalink to this headline">¶</a></h4>
+<p>Script evaluation</p>
+<p>Be warned that there are highly likely to be consensus bugs in this code; it is
+unlikely to match Satoshi Bitcoin exactly. Think carefully before using this
+module.</p>
+</div>
+<div class="section" id="module-bitcoin.core.serialize">
+<span id="serialize"></span><h4><code class="xref py py-mod docutils literal notranslate"><span class="pre">serialize</span></code><a class="headerlink" href="#module-bitcoin.core.serialize" title="Permalink to this headline">¶</a></h4>
+<p>Serialization routines</p>
+<p>You probably don’t need to use these directly.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-bitcoin">bitcoin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bitcoin</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.base58"><code class="xref py py-mod docutils literal notranslate"><span class="pre">base58</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.bloom"><code class="xref py py-mod docutils literal notranslate"><span class="pre">bloom</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.messages"><code class="xref py py-mod docutils literal notranslate"><span class="pre">messages</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.net"><code class="xref py py-mod docutils literal notranslate"><span class="pre">net</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.rpc"><code class="xref py py-mod docutils literal notranslate"><span class="pre">rpc</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.signature"><code class="xref py py-mod docutils literal notranslate"><span class="pre">signature</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.signmessage"><code class="xref py py-mod docutils literal notranslate"><span class="pre">signmessage</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.wallet"><code class="xref py py-mod docutils literal notranslate"><span class="pre">wallet</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#document-bitcoin.core">bitcoin.core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.core"><code class="xref py py-mod docutils literal notranslate"><span class="pre">core</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.core.key"><code class="xref py py-mod docutils literal notranslate"><span class="pre">key</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.core.script"><code class="xref py py-mod docutils literal notranslate"><span class="pre">script</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.core.scripteval"><code class="xref py py-mod docutils literal notranslate"><span class="pre">scripteval</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#module-bitcoin.core.serialize"><code class="xref py py-mod docutils literal notranslate"><span class="pre">serialize</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="#">python-bitcoinlib 0.11.1dev documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">python-bitcoinlib 0.11.1dev documentation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2012-2015, The python-bitcoinlib developers.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.2.1.
+    </div>
+  </body>
+</html>

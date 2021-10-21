@@ -21,10 +21,10 @@ def getConfig(file=None):
     [default]
     {data}
     """)
-    
+
     return config['default']
 
-config=get_config()
+config=getConfig()
 
 testnet=int(config.get('testnet',0))
 user=str(config.get('rpcuser',''))

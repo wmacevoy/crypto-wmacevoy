@@ -4,4 +4,4 @@ if [ ! -d "$HOME/shares" ]
 then
     mkdir $HOME/shares
 fi
-/usr/bin/vmhgfs-fuse .host:/ "$HOME/shares" -o subtype=vmhgfs-fuse
+/usr/bin/vmhgfs-fuse -o uid=$(id -u) -o gid=$(id -g) -o subtype=vmhgfs-fuse .host:/ "$HOME/shares"

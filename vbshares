@@ -1,0 +1,13 @@
+#!/bin/bash
+
+for share in bitcoin-portable
+do
+    if [ ! -d "$HOME/shares/$share" ]
+    then
+	mkdir -p "$HOME/shares/$share"
+    fi
+
+    sudo mount -t vboxsf -o uid=$(id -u) -o gid=$(id -g) \
+	 "$share"  "$HOME/shares/$share"
+done
+

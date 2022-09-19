@@ -9,3 +9,10 @@ python3 -m venv venv
 pip install flask
 pip install requests
 ```
+
+Create hello.py
+
+```bash
+. venv/bin/activate
+flask --app hello run
+```

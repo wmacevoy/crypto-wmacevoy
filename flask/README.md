@@ -16,3 +16,5 @@ Create hello.py
 . venv/bin/activate
 flask --app hello run
 ```
+
+Try localhost:5000 and see "Hello World"

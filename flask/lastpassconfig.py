@@ -49,10 +49,7 @@ class LastpassConfig:
         
     @property
     def lastpassNote(self):
-        if self._lastpassNote == None:
-            return "api.coinbase.com"
-        else:
-            return self._lastpassNote
+        return self._lastpassNote
 
     @lastpassNote.setter
     def lastpassNote(self,value):

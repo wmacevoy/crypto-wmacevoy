@@ -20,7 +20,12 @@ def testGetProducts():
 def testGetFees():
     api = CoinbaseProAPI()
     result = api.get_fees()
-    print(result)
     assert float(result['maker_fee_rate']) > 0.0
     assert float(result['taker_fee_rate']) > 0.0
+    
+
+def testGetCurrentUser():
+    api = CoinbaseProAPI()
+    result = api.get_current_user()
+    print(result)
     

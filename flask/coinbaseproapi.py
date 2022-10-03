@@ -1255,3 +1255,6 @@ class CoinbaseProAPI:
                 }
         """
         return self._send_message('get', '/fees')
+
+    def get_current_user(self):
+        return self._send_message('get','/user')

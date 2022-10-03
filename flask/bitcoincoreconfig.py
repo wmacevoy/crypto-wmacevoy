@@ -1,5 +1,3 @@
-import requests
-import json
 import configparser
 import pathlib
 from pathlib import Path
